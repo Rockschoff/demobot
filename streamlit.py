@@ -73,7 +73,7 @@ def get_response():
     run = client.beta.threads.runs.create(
         thread_id=st.session_state.thread_id,
         assistant_id=st.secrets["OPENAI_ASSISTANT_ID2"],
-        tool_choice={"type": "function", "function": {"name": "Search_FDA_Guidance_Docs"}}
+        tool_choice="auto"#{"type": "function", "function": {"name": "Search_FDA_Guidance_Docs"}}
     )
     
     def wait_on_run(run):
