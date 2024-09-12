@@ -11,7 +11,7 @@ tavily_client = TavilyClient(api_key=st.secrets["TAVILY_API_KEY"])
 
 def search_FDA_guidance_docs(search_terms : str)->str:
     print("Searching FDA", search_terms)
-    response = tavily_client.search(search_terms, include_domains=["fda.gov", "accessdata.fda.gov"])
+    response = tavily_client.search(search_terms, include_domains=["fda.gov"])
     print(response["results"])
     return str(response)
 
